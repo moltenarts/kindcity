@@ -413,6 +413,68 @@
     color: var(--ink);
   }
 
+  .signup-form {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .signup-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .signup-row input[type="email"] {
+    flex: 1 1 220px;
+    padding: 13px 18px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(251, 247, 240, 0.3);
+    background: rgba(251, 247, 240, 0.08);
+    color: var(--cream);
+    font-size: 0.98rem;
+    font-family: var(--sans);
+  }
+
+  .signup-row input[type="email"]::placeholder {
+    color: rgba(251, 247, 240, 0.55);
+  }
+
+  .signup-row input[type="email"]:focus {
+    outline: 2px solid var(--cream);
+    outline-offset: 2px;
+  }
+
+  .signup-row button {
+    border: none;
+    cursor: pointer;
+    font-family: var(--sans);
+  }
+
+  .signup-form .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .signup-status {
+    margin: 14px 0 0;
+    font-size: 0.9rem;
+    color: #D9D2C4;
+  }
+
+  .signup-alt {
+    margin-top: 18px;
+    font-size: 0.88rem;
+    color: #D9D2C4;
+  }
+
+  .signup-alt a {
+    text-decoration: underline;
+  }
+
   /* Footer */
   footer {
     padding: 56px 24px 40px;
@@ -651,8 +713,17 @@
   <section>
     <div class="cta-band">
       <h2>Be the first to know</h2>
-      <p>Kind City Baths and Kind City Rock Camp are coming soon. Reach out to hear about launch dates and how to get involved.</p>
-      <a class="btn btn-primary" href="mailto:hello@kindcity.org">hello@kindcity.org</a>
+      <p>Kind City Baths and Kind City Rock Camp are coming soon. Sign up to hear about launch dates and how to get involved.</p>
+      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup-form" id="signupForm">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p class="hp-field"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+        <div class="signup-row">
+          <input type="email" name="email" id="signupEmail" placeholder="you@example.com" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </div>
+        <p class="signup-status" id="signupStatus" role="status" aria-live="polite"></p>
+      </form>
+      <p class="signup-alt">Or reach out directly: <a href="mailto:hello@kindcity.org">hello@kindcity.org</a></p>
     </div>
   </section>
 
@@ -706,6 +777,36 @@
       toggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  function encodeForm(data) {
+    return Object.keys(data)
+      .map(function (key) { return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]); })
+      .join('&');
+  }
+
+  var signupForm = document.getElementById('signupForm');
+  var signupStatus = document.getElementById('signupStatus');
+  if (signupForm) {
+    signupForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var formData = new FormData(signupForm);
+      var payload = {};
+      formData.forEach(function (value, key) { payload[key] = value; });
+      signupStatus.textContent = 'Submitting...';
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeForm(payload)
+      })
+        .then(function () {
+          signupStatus.textContent = "Thanks! We'll be in touch.";
+          signupForm.reset();
+        })
+        .catch(function () {
+          signupStatus.textContent = 'Something went wrong. Please try emailing hello@kindcity.org instead.';
+        });
+    });
+  }
 </script>
 
 </body>
