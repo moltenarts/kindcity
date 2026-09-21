@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" baseProfile="tiny-ps" version="1.2" viewBox="0 0 300 300" width="300" height="300">
+<title>Kind City Trust</title>
+<rect width="300" height="300" fill="#FBF7F0"/>
+<path d="M150,150 L150,30 A120,120 0 0,1 254,210 Z" fill="#D97756"/>
+<path d="M150,150 L254,210 A120,120 0 0,1 46,210 Z" fill="#B84568"/>
+<path d="M150,150 L46,210 A120,120 0 0,1 150,30 Z" fill="#3E6E8E"/>
+</svg>
