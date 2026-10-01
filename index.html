@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kind City Trust</title>
-<meta name="description" content="Kind City Trust builds a kinder city through programs that nurture Bodies, Hearts &amp; Minds, including Kind City Baths and Kind City Rock Camp.">
+<title>Kind City | Building the strength to stay kind</title>
+<meta name="description" content="Kind City builds the capacity to lead with kindness in challenging times, through programs for Body, Heart &amp; Mind, including Kind City Baths and Kind City Rock Camp.">
 <link rel="icon" type="image/svg+xml" href="/logo.svg">
 <style>
   :root {
@@ -12,14 +12,17 @@
     --cream-deep: #F3ECE0;
     --ink: #2B2521;
     --ink-soft: #5B5148;
-    --bodies: #E7A441;
-    --bodies-soft: #FBEACC;
-    --hearts: #C81C44;
-    --hearts-soft: #F6D3DE;
-    --minds: #4F8566;
-    --minds-soft: #DDEADF;
-    --brand-purple: #804A97;
-    --brand-purple-soft: #EDE0F2;
+    --body: #E7A441;
+    --body-ink: #9A5A12;
+    --body-soft: #FBEACC;
+    --heart: #C81C44;
+    --heart-ink: #A8173A;
+    --heart-soft: #F8D9E1;
+    --mind: #4F8566;
+    --mind-ink: #3A6650;
+    --mind-soft: #DDEADF;
+    --purple: #804A97;
+    --purple-soft: #EDE0F2;
     --line: #E7DECD;
     --radius: 18px;
     --serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
@@ -61,7 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 24px;
+    padding: 14px 24px;
     max-width: 1080px;
     margin: 0 auto;
   }
@@ -78,10 +81,9 @@
   }
 
   .brand-mark {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     flex-shrink: 0;
-    display: block;
   }
 
   nav.links {
@@ -96,7 +98,7 @@
     transition: color 0.15s ease;
   }
 
-  nav.links a:hover { color: var(--ink); }
+  nav.links a:hover { color: var(--purple); }
 
   .nav-toggle {
     display: none;
@@ -116,8 +118,14 @@
 
   /* Hero */
   .hero {
-    padding: 88px 24px 72px;
+    padding: 64px 24px 72px;
     text-align: center;
+  }
+
+  .hero-logo {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 20px;
   }
 
   .eyebrow {
@@ -125,23 +133,22 @@
     font-size: 0.8rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--brand-purple);
-    background: var(--brand-purple-soft);
-    border: 1px solid transparent;
+    color: var(--purple);
+    background: var(--purple-soft);
     border-radius: 999px;
     padding: 6px 16px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   h1 {
     font-family: var(--serif);
-    font-size: clamp(2.2rem, 5vw, 3.4rem);
-    line-height: 1.15;
+    font-size: clamp(2.3rem, 5.5vw, 3.6rem);
+    line-height: 1.1;
     margin: 0 0 20px;
   }
 
   .hero p.lede {
-    max-width: 620px;
+    max-width: 640px;
     margin: 0 auto 32px;
     font-size: 1.15rem;
     color: var(--ink-soft);
@@ -161,7 +168,7 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 0.98rem;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.15s ease;
   }
 
   .btn:hover { transform: translateY(-1px); }
@@ -177,10 +184,10 @@
     border: 1.5px solid var(--line);
   }
 
-  /* Pillars intro */
+  /* Section heads */
   .section-head {
     text-align: center;
-    max-width: 620px;
+    max-width: 640px;
     margin: 0 auto 48px;
   }
 
@@ -189,6 +196,7 @@
   .section-head h2 {
     font-family: var(--serif);
     font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+    line-height: 1.2;
     margin: 0 0 12px;
   }
 
@@ -200,7 +208,7 @@
   section { padding: 80px 0; }
   section.alt { background: var(--cream-deep); }
 
-  /* Pillars grid */
+  /* Pillars */
   .pillars {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -211,77 +219,74 @@
     background: #fff;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 32px 26px;
+    padding: 32px 28px 28px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
   }
 
   .pillar-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 4px;
+    margin-bottom: 20px;
   }
 
-  .pillar-icon.bodies { background: var(--bodies-soft); color: var(--bodies); }
-  .pillar-icon.hearts { background: var(--hearts-soft); color: var(--hearts); }
-  .pillar-icon.minds { background: var(--minds-soft); color: var(--minds); }
+  .pillar-icon svg { width: 28px; height: 28px; }
+
+  .pillar-icon.body { background: var(--body-soft); color: var(--body-ink); }
+  .pillar-icon.heart { background: var(--heart-soft); color: var(--heart-ink); }
+  .pillar-icon.mind { background: var(--mind-soft); color: var(--mind-ink); }
 
   .pillar-card h3 {
     font-family: var(--serif);
-    font-size: 1.35rem;
-    margin: 0;
+    font-size: 1.4rem;
+    margin: 0 0 10px;
   }
 
   .pillar-card p {
     color: var(--ink-soft);
-    margin: 0;
+    margin: 0 0 24px;
     font-size: 0.98rem;
-    flex-grow: 1;
   }
 
   .pillar-flagship {
-    margin-top: 6px;
-    padding-top: 16px;
+    margin-top: auto;
+    padding-top: 18px;
     border-top: 1px dashed var(--line);
-    font-size: 0.9rem;
   }
 
   .pillar-flagship .label {
+    display: block;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-size: 0.72rem;
     color: var(--ink-soft);
-    display: block;
     margin-bottom: 4px;
   }
 
   .pillar-flagship .name {
+    display: block;
     font-weight: 700;
     font-size: 1rem;
+    margin-bottom: 10px;
   }
 
-  .badge-soon {
+  .badge {
     display: inline-block;
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    padding: 3px 10px;
+    padding: 4px 10px;
     border-radius: 999px;
-    margin-left: 8px;
-    vertical-align: middle;
-    position: relative;
-    top: -1px;
   }
 
-  .badge-soon.bodies { background: var(--bodies-soft); color: var(--bodies); }
-  .badge-soon.hearts { background: var(--hearts-soft); color: var(--hearts); }
-  .badge-soon.minds { background: var(--minds-soft); color: var(--minds); }
+  .badge.body { background: var(--body-soft); color: var(--body-ink); }
+  .badge.heart { background: var(--heart-soft); color: var(--heart-ink); }
+  .badge.mind { background: var(--mind-soft); color: var(--mind-ink); }
 
   /* Flagship programs */
   .programs {
@@ -292,28 +297,24 @@
 
   .program-card {
     border-radius: var(--radius);
-    padding: 36px 32px;
+    padding: 32px;
     color: #fff;
-    position: relative;
-    overflow: hidden;
-    min-height: 260px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    align-items: flex-start;
   }
 
-  .program-card.baths { background: linear-gradient(150deg, var(--bodies), #B24E30); }
-  .program-card.rockcamp { background: linear-gradient(150deg, var(--hearts), #7E2B45); }
+  .program-card.baths { background: linear-gradient(150deg, #A65F16, #7E4410); }
+  .program-card.rockcamp { background: linear-gradient(150deg, var(--heart), #7E1530); }
 
   .program-card .pillar-tag {
-    align-self: flex-start;
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    background: rgba(255,255,255,0.22);
+    background: rgba(255,255,255,0.2);
     padding: 5px 12px;
     border-radius: 999px;
-    margin-bottom: auto;
+    margin-bottom: 24px;
   }
 
   .program-card h3 {
@@ -323,18 +324,72 @@
   }
 
   .program-card p {
-    margin: 0 0 14px;
-    opacity: 0.92;
+    margin: 0 0 24px;
+    opacity: 0.94;
     font-size: 0.98rem;
+    flex-grow: 1;
   }
 
-  .program-card .badge-soon {
-    background: rgba(255,255,255,0.9);
-    margin-left: 0;
+  .program-card .badge { background: #fff; }
+  .program-card.baths .badge { color: #7E4410; }
+  .program-card.rockcamp .badge { color: var(--heart-ink); }
+
+  /* Why kindness */
+  .research {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
   }
 
-  .program-card.baths .badge-soon { color: var(--bodies); }
-  .program-card.rockcamp .badge-soon { color: var(--hearts); }
+  .research-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .research-card .stat {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .research-card.body .stat { color: var(--body-ink); }
+  .research-card.heart .stat { color: var(--heart-ink); }
+  .research-card.mind .stat { color: var(--mind-ink); }
+  .research-card.purple .stat { color: var(--purple); }
+
+  .research-card h3 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    margin: 0 0 8px;
+  }
+
+  .research-card p {
+    margin: 0 0 16px;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    flex-grow: 1;
+  }
+
+  .research-card .source {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+
+  .research-card .source a { text-decoration: underline; }
+
+  .research-close {
+    text-align: center;
+    max-width: 620px;
+    margin: 40px auto 0;
+    font-family: var(--serif);
+    font-size: 1.2rem;
+  }
 
   /* About */
   .about {
@@ -347,10 +402,13 @@
   .about h2 {
     font-family: var(--serif);
     font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+    line-height: 1.2;
     margin: 0 0 18px;
   }
 
   .about p { color: var(--ink-soft); margin: 0 0 16px; }
+
+  .about .btn { margin-top: 8px; }
 
   .about-stats {
     display: grid;
@@ -370,11 +428,12 @@
     height: 10px;
     border-radius: 50%;
     margin-bottom: 10px;
+    background: var(--purple);
   }
 
-  .stat-card.bodies .dot { background: var(--bodies); }
-  .stat-card.hearts .dot { background: var(--hearts); }
-  .stat-card.minds .dot { background: var(--minds); }
+  .stat-card.body .dot { background: var(--body); }
+  .stat-card.heart .dot { background: var(--heart); }
+  .stat-card.mind .dot { background: var(--mind); }
 
   .stat-card h4 {
     margin: 0 0 6px;
@@ -473,9 +532,7 @@
     color: #D9D2C4;
   }
 
-  .signup-alt a {
-    text-decoration: underline;
-  }
+  .signup-alt a { text-decoration: underline; }
 
   /* Footer */
   footer {
@@ -537,9 +594,7 @@
   }
 
   @media (max-width: 860px) {
-    .pillars { grid-template-columns: 1fr; }
-    .programs { grid-template-columns: 1fr; }
-    .about { grid-template-columns: 1fr; }
+    .pillars, .programs, .research, .about { grid-template-columns: 1fr; }
     nav.links {
       position: absolute;
       top: 100%;
@@ -563,13 +618,14 @@
   <div class="nav">
     <a class="brand" href="#top">
       <img class="brand-mark" src="/logo.svg" alt="" aria-hidden="true">
-      Kind City Trust
+      Kind City
     </a>
     <nav class="links" id="navLinks">
       <a href="#pillars">Pillars</a>
       <a href="#programs">Programs</a>
+      <a href="#why">Why Kindness</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#join">Join</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -581,15 +637,17 @@
 
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Kind City Trust</span>
-      <h1>Building a kinder city,<br>one body, heart &amp; mind at a time.</h1>
+      <img class="hero-logo" src="/logo.svg" alt="Kind City logo">
+      <span class="eyebrow">Body. Heart. Mind.</span>
+      <h1>Building the strength<br>to stay kind.</h1>
       <p class="lede">
-        Kind City Trust invests in shared experiences that nourish the body, heart, and mind,
-        because when people are cared for, they're free to lead with kindness.
+        Hard times wear people down, and kindness is often the first thing to go. Kind City creates
+        shared spaces to restore the body, open the heart, and steady the mind, so we have the
+        capacity to lead with kindness when it matters most.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#pillars">Explore Our Pillars</a>
-        <a class="btn btn-secondary" href="#contact">Get Involved</a>
+        <a class="btn btn-primary" href="#pillars">Explore the Pillars</a>
+        <a class="btn btn-secondary" href="#join">Join the List</a>
       </div>
     </div>
   </section>
@@ -598,46 +656,47 @@
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Our Pillars</span>
-        <h2>Three pillars, one city</h2>
-        <p>Every program we support falls under one of three pillars, each addressing a different part of what it means to live well.</p>
+        <h2>Where kindness gets its strength</h2>
+        <p>Kindness takes energy. We help people rebuild it in three places, so it's there when life gets hard.</p>
       </div>
 
       <div class="pillars">
         <div class="pillar-card">
-          <div class="pillar-icon bodies" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2.5C9 7 5.5 11.2 5.5 15a6.5 6.5 0 0 0 13 0c0-3.8-3.5-8-6.5-12.5z" fill="currentColor"/></svg>
+          <div class="pillar-icon body" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.5c-1.2 1.2 1.2 2.3 0 3.5s1.2 2.3 0 3.5"/><path d="M12 3.5c-1.2 1.2 1.2 2.3 0 3.5s1.2 2.3 0 3.5"/><path d="M16 3.5c-1.2 1.2 1.2 2.3 0 3.5s1.2 2.3 0 3.5"/><path d="M3 15.5c1.5 1.2 3 1.2 4.5 0s3-1.2 4.5 0 3 1.2 4.5 0 3-1.2 4.5 0"/><path d="M3 19.5c1.5 1.2 3 1.2 4.5 0s3-1.2 4.5 0 3 1.2 4.5 0 3-1.2 4.5 0"/></svg>
           </div>
-          <h3>Bodies</h3>
-          <p>Programs that nourish physical health and wellbeing: wellness, hygiene, and food, helping people meet basic needs and feel cared for.</p>
+          <h3>Body</h3>
+          <p>Warmth, water, rest, and nourishment. When the body is cared for and the nervous system can settle, there's room again for patience and generosity.</p>
           <div class="pillar-flagship">
             <span class="label">Flagship Program</span>
             <span class="name">Kind City Baths</span>
-            <span class="badge-soon bodies">Coming Soon</span>
+            <span class="badge body">Coming Soon</span>
           </div>
         </div>
 
         <div class="pillar-card">
-          <div class="pillar-icon hearts" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-10-9.3C0.3 8.1 2 4.5 5.6 4c2-.3 3.7.6 5 2.3C11.9 4.6 13.6 3.7 15.6 4c3.6.5 5.3 4.1 3.6 7.7C21.5 16.4 14 21 12 21z" fill="currentColor"/></svg>
+          <div class="pillar-icon heart" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-8.6-9.1C2.3 7.6 4.4 4.5 7.6 4.5c1.9 0 3.4 1 4.4 2.6 1-1.6 2.5-2.6 4.4-2.6 3.2 0 5.3 3.1 4.2 6.4C19 15.6 12 20 12 20z"/><path d="M8.5 11h2l1-2 1.5 4 1-2h1.5"/></svg>
           </div>
-          <h3>Hearts</h3>
-          <p>Music and arts programs that build confidence, connection, and belonging, especially for young people whose voices go unheard.</p>
+          <h3>Heart</h3>
+          <p>Music, art, and shared creative work that build courage and belonging, especially for young people still learning that their voice matters.</p>
           <div class="pillar-flagship">
             <span class="label">Flagship Program</span>
             <span class="name">Kind City Rock Camp</span>
-            <span class="badge-soon hearts">Coming Soon</span>
+            <span class="badge heart">Coming Soon</span>
           </div>
         </div>
 
         <div class="pillar-card">
-          <div class="pillar-icon minds" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6V16h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="pillar-icon mind" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c-2 2.4-2 6.6 0 9.5 2-2.9 2-7.1 0-9.5z"/><path d="M12 14.5C9.2 14.2 6.2 12 5 8.8c3.1.1 5.9 2.3 7 5.7z"/><path d="M12 14.5c1.1-3.4 3.9-5.6 7-5.7-1.2 3.2-4.2 5.4-7 5.7z"/><path d="M4 17.5c2.6 2.2 13.4 2.2 16 0"/></svg>
           </div>
-          <h3>Minds</h3>
-          <p>Programs in meditation and somatic therapies that help people process stress, feel at home in their bodies, and build lasting mental wellbeing.</p>
+          <h3>Mind</h3>
+          <p>Meditation and somatic practices that help people notice stress in the body and respond with intention instead of reacting from overwhelm.</p>
           <div class="pillar-flagship">
             <span class="label">Flagship Program</span>
-            <span class="name">Announcing soon</span>
+            <span class="name">Meditation &amp; Somatics</span>
+            <span class="badge mind">In Development</span>
           </div>
         </div>
       </div>
@@ -648,77 +707,117 @@
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Flagship Programs</span>
-        <h2>What we're building first</h2>
-        <p>Two flagship programs are leading the way: one for Bodies, one for Hearts.</p>
+        <h2>Where we're starting</h2>
+        <p>Two flagships lead the way, one for Body and one for Heart, with Mind programming to follow.</p>
       </div>
 
       <div class="programs">
         <div class="program-card baths">
-          <span class="pillar-tag">Bodies</span>
+          <span class="pillar-tag">Body</span>
           <h3>Kind City Baths</h3>
-          <p>A communal bathhouse experience open to the whole city: a place to rest, restore, and care for the body in good company.</p>
-          <span class="badge-soon">Coming Soon</span>
+          <p>A community bathhouse built on one of humanity's oldest social rituals. Heat, water, and rest make space for healing and purification, shared side by side with neighbors, the way Roman baths, Japanese sento, and Turkish hammams have gathered people for centuries.</p>
+          <span class="badge">Coming Soon</span>
         </div>
 
         <div class="program-card rockcamp">
-          <span class="pillar-tag">Hearts</span>
+          <span class="pillar-tag">Heart</span>
           <h3>Kind City Rock Camp</h3>
-          <p>A youth music empowerment camp where campers pick up an instrument, form a band, write an original song, and perform it live, building confidence and belonging one song at a time.</p>
-          <span class="badge-soon">Coming Soon</span>
+          <p>A youth music camp where campers pick up an instrument, form a band, write an original song, and perform it live. Practicing courage in front of a cheering room builds the confidence to show up for others.</p>
+          <span class="badge">Coming Soon</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about">
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why Kindness</span>
+        <h2>Kindness is a capacity, not a trait</h2>
+        <p>Research points the same way again and again: whether people act kindly depends a lot on the conditions they're living in. That's why we invest in conditions, not just good intentions.</p>
+      </div>
+
+      <div class="research">
+        <div class="research-card body">
+          <div class="stat">63% &rarr; 10%</div>
+          <h3>Hurry crowds out help</h3>
+          <p>In a classic study, seminary students walking to give a talk passed a stranger slumped in a doorway. 63% stopped to help when they had time. Only 10% did when they were rushed.</p>
+          <span class="source">Darley &amp; Batson, 1973 &middot; <a href="https://sparq.stanford.edu/solutions/take-time-be-good-samaritan" target="_blank" rel="noopener">Stanford SPARQ summary</a></span>
+        </div>
+
+        <div class="research-card heart">
+          <div class="stat">1 in 2</div>
+          <h3>Many of us are running on empty</h3>
+          <p>About half of U.S. adults report experiencing loneliness, according to the U.S. Surgeon General's 2023 advisory, which names social connection as essential to health.</p>
+          <span class="source">U.S. Surgeon General, 2023 &middot; <a href="https://integrationacademy.ahrq.gov/news-and-events/news/surgeon-general-advisory-epidemic-loneliness-and-isolation" target="_blank" rel="noopener">AHRQ summary</a></span>
+        </div>
+
+        <div class="research-card mind">
+          <div class="stat">3 degrees</div>
+          <h3>Kindness spreads</h3>
+          <p>In network experiments, one person's cooperative act influenced others up to three degrees of separation away, including people who never met the original giver.</p>
+          <span class="source">Fowler &amp; Christakis, 2010 &middot; <a href="https://www.pnas.org/doi/10.1073/pnas.0913149107" target="_blank" rel="noopener">PNAS</a></span>
+        </div>
+
+        <div class="research-card purple">
+          <div class="stat">27 studies</div>
+          <h3>Giving gives back</h3>
+          <p>A review of 27 studies found that performing acts of kindness gives a small but real boost to the well-being of the person being kind. Kindness helps refill the capacity it draws on.</p>
+          <span class="source">Curry et al., 2018 &middot; <a href="https://ora.ox.ac.uk/objects/uuid:4701365b-5760-4ece-a390-857a5f7b3c0c" target="_blank" rel="noopener">Oxford Research Archive</a></span>
+        </div>
+      </div>
+
+      <p class="research-close">Care builds capacity. Capacity makes kindness possible. Kindness, shared, makes a kind city.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="about">
     <div class="wrap about">
       <div>
-        <span class="eyebrow">About Kind City Trust</span>
-        <h2>A kinder city is built on purpose</h2>
+        <span class="eyebrow">About Kind City</span>
+        <h2>Kindness that holds up under pressure</h2>
         <p>
-          Kindness isn't a personality trait. It's a capacity that communities build or lose,
-          depending on whether their members feel cared for. When people can't meet basic needs,
-          when they've never been told their voice matters, when they have no place to gather and
-          create, kindness gets crowded out by survival. Kind City Trust exists to change those
-          conditions, one pillar at a time.
+          Anyone can be kind on a good day. The real test comes when people are exhausted, isolated,
+          or afraid, and that's exactly when communities need kindness most. Kind City builds the
+          everyday strength that makes kindness possible: bodies that are cared for, hearts that feel
+          connected, and minds that can stay steady under stress.
         </p>
         <p>
-          We're building in phases, starting with what's launchable now. Kind City Baths and Kind
-          City Rock Camp lead the way, with more programs following as each proves itself. Everything
-          we do is public from day one, so the city can grow with us instead of waiting for a
-          finished plan.
+          We're building in phases, starting with what we can launch now. Kind City Baths and Kind
+          City Rock Camp lead the way, with Mind programming to follow. We're building in the open,
+          so the city can grow with us instead of waiting for a finished plan.
         </p>
-        <a class="btn btn-primary" href="#contact">Follow Our Progress</a>
+        <a class="btn btn-primary" href="#join">Follow Our Progress</a>
       </div>
       <div class="about-stats">
-        <div class="stat-card bodies">
+        <div class="stat-card body">
           <div class="dot"></div>
-          <h4>Bodies</h4>
-          <p>Wellness, hygiene &amp; food</p>
+          <h4>Body</h4>
+          <p>Rest, warmth &amp; nourishment</p>
         </div>
-        <div class="stat-card hearts">
+        <div class="stat-card heart">
           <div class="dot"></div>
-          <h4>Hearts</h4>
-          <p>Connection &amp; belonging</p>
+          <h4>Heart</h4>
+          <p>Courage &amp; belonging</p>
         </div>
-        <div class="stat-card minds">
+        <div class="stat-card mind">
           <div class="dot"></div>
-          <h4>Minds</h4>
-          <p>Meditation &amp; somatic therapies</p>
+          <h4>Mind</h4>
+          <p>Meditation &amp; somatics</p>
         </div>
         <div class="stat-card">
-          <div class="dot" style="background:var(--ink)"></div>
-          <h4>2 Programs</h4>
+          <div class="dot"></div>
+          <h4>2 Flagships</h4>
           <p>Launching soon</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="join">
     <div class="cta-band">
       <h2>Be the first to know</h2>
-      <p>Kind City Baths and Kind City Rock Camp are coming soon. Sign up to hear about launch dates and how to get involved.</p>
+      <p>Kind City Baths and Kind City Rock Camp are coming soon. Join the list for launch news and ways to get involved.</p>
       <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup-form" id="signupForm">
         <input type="hidden" name="form-name" value="newsletter">
         <p class="hp-field"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
@@ -739,16 +838,16 @@
     <div class="footer-brand">
       <a class="brand" href="#top">
         <img class="brand-mark" src="/logo.svg" alt="" aria-hidden="true">
-        Kind City Trust
+        Kind City
       </a>
-      <p>Building a kinder city through programs for Bodies, Hearts &amp; Minds.</p>
+      <p>Building the strength to stay kind, through Body, Heart &amp; Mind.</p>
     </div>
     <div class="footer-links">
       <div class="footer-col">
         <h5>Pillars</h5>
-        <a href="#pillars">Bodies</a>
-        <a href="#pillars">Hearts</a>
-        <a href="#pillars">Minds</a>
+        <a href="#pillars">Body</a>
+        <a href="#pillars">Heart</a>
+        <a href="#pillars">Mind</a>
       </div>
       <div class="footer-col">
         <h5>Programs</h5>
@@ -758,12 +857,12 @@
       <div class="footer-col">
         <h5>Connect</h5>
         <a href="mailto:hello@kindcity.org">hello@kindcity.org</a>
-        <a href="#about">About</a>
+        <a href="#join">Join the List</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; <span id="year"></span> Kind City Trust. All rights reserved.</span>
+    <span>&copy; <span id="year"></span> Kind City. All rights reserved.</span>
     <span>kindcity.org</span>
   </div>
 </footer>
@@ -791,27 +890,25 @@
 
   var signupForm = document.getElementById('signupForm');
   var signupStatus = document.getElementById('signupStatus');
-  if (signupForm) {
-    signupForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var formData = new FormData(signupForm);
-      var payload = {};
-      formData.forEach(function (value, key) { payload[key] = value; });
-      signupStatus.textContent = 'Submitting...';
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encodeForm(payload)
+  signupForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var payload = {};
+    new FormData(signupForm).forEach(function (value, key) { payload[key] = value; });
+    signupStatus.textContent = 'Submitting...';
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeForm(payload)
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        signupStatus.textContent = "Thanks! We'll be in touch.";
+        signupForm.reset();
       })
-        .then(function () {
-          signupStatus.textContent = "Thanks! We'll be in touch.";
-          signupForm.reset();
-        })
-        .catch(function () {
-          signupStatus.textContent = 'Something went wrong. Please try emailing hello@kindcity.org instead.';
-        });
-    });
-  }
+      .catch(function () {
+        signupStatus.textContent = 'Something went wrong. Please try emailing hello@kindcity.org instead.';
+      });
+  });
 </script>
 
 </body>
