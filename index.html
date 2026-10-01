@@ -8,22 +8,22 @@
 <link rel="icon" type="image/svg+xml" href="/logo.svg">
 <style>
   :root {
-    --cream: #FBF7F0;
-    --cream-deep: #F3ECE0;
-    --ink: #2B2521;
-    --ink-soft: #5B5148;
-    --body: #E7A441;
-    --body-ink: #9A5A12;
-    --body-soft: #FBEACC;
-    --heart: #C81C44;
-    --heart-ink: #A8173A;
-    --heart-soft: #F8D9E1;
-    --mind: #4F8566;
-    --mind-ink: #3A6650;
-    --mind-soft: #DDEADF;
-    --purple: #804A97;
-    --purple-soft: #EDE0F2;
-    --line: #E7DECD;
+    --cream: #FFF7F2;
+    --cream-deep: #FDEBE1;
+    --ink: #1F120C;
+    --ink-soft: #5E4438;
+    --body: #EE5E02;
+    --body-ink: #A33A00;
+    --body-soft: #FDE3D0;
+    --heart: #CA0519;
+    --heart-ink: #A8061A;
+    --heart-soft: #FAD7DA;
+    --mind: #E8A10A;
+    --mind-ink: #845A00;
+    --mind-soft: #FCEFCB;
+    --accent: #AC2B02;
+    --accent-soft: #FED5C6;
+    --line: #F1D9CC;
     --radius: 18px;
     --serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -55,7 +55,7 @@
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(251, 247, 240, 0.92);
+    background: rgba(255, 247, 242, 0.92);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--line);
   }
@@ -98,7 +98,7 @@
     transition: color 0.15s ease;
   }
 
-  nav.links a:hover { color: var(--purple); }
+  nav.links a:hover { color: var(--accent); }
 
   .nav-toggle {
     display: none;
@@ -123,8 +123,8 @@
   }
 
   .hero-logo {
-    width: 128px;
-    height: 128px;
+    width: 160px;
+    height: 160px;
     margin: 0 auto 20px;
   }
 
@@ -133,8 +133,8 @@
     font-size: 0.8rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--purple);
-    background: var(--purple-soft);
+    color: var(--accent);
+    background: var(--accent-soft);
     border-radius: 999px;
     padding: 6px 16px;
     margin-bottom: 20px;
@@ -304,8 +304,8 @@
     align-items: flex-start;
   }
 
-  .program-card.baths { background: linear-gradient(150deg, #A65F16, #7E4410); }
-  .program-card.rockcamp { background: linear-gradient(150deg, var(--heart), #7E1530); }
+  .program-card.baths { background: linear-gradient(150deg, #C84A02, #8E2E02); }
+  .program-card.rockcamp { background: linear-gradient(150deg, var(--heart), #7A0712); }
 
   .program-card .pillar-tag {
     font-size: 0.72rem;
@@ -331,7 +331,7 @@
   }
 
   .program-card .badge { background: #fff; }
-  .program-card.baths .badge { color: #7E4410; }
+  .program-card.baths .badge { color: #8E2E02; }
   .program-card.rockcamp .badge { color: var(--heart-ink); }
 
   /* Why kindness */
@@ -361,7 +361,7 @@
   .research-card.body .stat { color: var(--body-ink); }
   .research-card.heart .stat { color: var(--heart-ink); }
   .research-card.mind .stat { color: var(--mind-ink); }
-  .research-card.purple .stat { color: var(--purple); }
+  .research-card.accent .stat { color: var(--accent); }
 
   .research-card h3 {
     font-family: var(--serif);
@@ -428,7 +428,7 @@
     height: 10px;
     border-radius: 50%;
     margin-bottom: 10px;
-    background: var(--purple);
+    background: var(--accent);
   }
 
   .stat-card.body .dot { background: var(--body); }
@@ -759,7 +759,7 @@
           <span class="source">Fowler &amp; Christakis, 2010 &middot; <a href="https://www.pnas.org/doi/10.1073/pnas.0913149107" target="_blank" rel="noopener">PNAS</a></span>
         </div>
 
-        <div class="research-card purple">
+        <div class="research-card accent">
           <div class="stat">27 studies</div>
           <h3>Giving gives back</h3>
           <p>A review of 27 studies found that performing acts of kindness gives a small but real boost to the well-being of the person being kind. Kindness helps refill the capacity it draws on.</p>
